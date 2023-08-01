@@ -1,0 +1,375 @@
+"This could have been a markdown file"
+
+api
+├── applications
+│   ├── convnext
+│   ├── densenet
+│   ├── efficientnet
+│   ├── efficientnet_v2
+│   ├── inceptionresnetv2
+│   ├── inceptionv3
+│   ├── mobilenet
+│   ├── nasnet
+│   ├── resnet
+│   ├── vgg
+│   └── xception
+├── callbacks
+│   ├── backup_and_restore
+│   ├── base_callback
+│   ├── csv_logger
+│   ├── early_stopping
+│   ├── lambda_callback
+│   ├── learning_rate_scheduler
+│   ├── model_checkpoint
+│   ├── progbar_logger
+│   ├── reduce_lr_on_plateau
+│   ├── remote_monitor
+│   ├── tensorboard
+│   └── terminate_on_nan
+├── data_loading
+│   ├── audio
+│   ├── image
+│   ├── text
+│   └── timeseries
+├── datasets
+│   ├── boston_housing
+│   ├── cifar10
+│   ├── cifar100
+│   ├── fashion_mnist
+│   ├── imdb
+│   ├── mnist
+│   └── reuters
+├── keras_cv
+│   ├── bounding_box
+│   │   ├── formats
+│   │   └── utils
+│   │       ├── clip_to_image
+│   │       ├── compute_iou
+│   │       └── convert_format
+│   ├── layers
+│   │   ├── augmentation
+│   │   │   ├── aug_mix
+│   │   │   ├── auto_contrast
+│   │   │   ├── channel_shuffle
+│   │   │   ├── cut_mix
+│   │   │   ├── fourier_mix
+│   │   │   ├── grid_mask
+│   │   │   ├── jittered_resize
+│   │   │   ├── mix_up
+│   │   │   ├── rand_augment
+│   │   │   ├── random_augmentation_pipeline
+│   │   │   ├── random_channel_shift
+│   │   │   ├── random_color_degeneration
+│   │   │   ├── random_cutout
+│   │   │   ├── random_hue
+│   │   │   ├── random_saturation
+│   │   │   ├── random_sharpness
+│   │   │   ├── random_shear
+│   │   │   └── solarization
+│   │   ├── preprocessing
+│   │   │   ├── equalization
+│   │   │   ├── grayscale
+│   │   │   ├── posterization
+│   │   │   └── resizing
+│   │   └── regularization
+│   │       ├── dropblock2d
+│   │       ├── drop_path
+│   │       ├── squeeze_and_excite_2d
+│   │       └── stochastic_depth
+│   └── models
+│       ├── backbones
+│       │   ├── csp_darknet
+│       │   ├── efficientnetv2
+│       │   ├── mobilenetv3
+│       │   ├── resnet_v1
+│       │   ├── resnet_v2
+│       │   └── yolo_v8
+│       └── tasks
+│           ├── image_classifier
+│           ├── retinanet
+│           ├── stable_diffusion
+│           └── yolo_v8_detector
+├── keras_nlp
+│   ├── metrics
+│   │   ├── bleu
+│   │   ├── edit_distance
+│   │   ├── perplexity
+│   │   ├── rouge_l
+│   │   └── rouge_n
+│   ├── modeling_layers
+│   │   ├── cached_multi_head_attention
+│   │   ├── fnet_encoder
+│   │   ├── masked_lm_head
+│   │   ├── position_embedding
+│   │   ├── sine_position_encoding
+│   │   ├── token_and_position_embedding
+│   │   ├── transformer_decoder
+│   │   └── transformer_encoder
+│   ├── models
+│   │   ├── albert
+│   │   │   ├── albert_backbone
+│   │   │   ├── albert_classifier
+│   │   │   ├── albert_masked_lm
+│   │   │   ├── albert_masked_lm_preprocessor
+│   │   │   ├── albert_preprocessor
+│   │   │   └── albert_tokenizer
+│   │   ├── bert
+│   │   │   ├── bert_backbone
+│   │   │   ├── bert_classifier
+│   │   │   ├── bert_masked_lm
+│   │   │   ├── bert_masked_lm_preprocessor
+│   │   │   ├── bert_preprocessor
+│   │   │   └── bert_tokenizer
+│   │   ├── deberta_v3
+│   │   │   ├── deberta_v3_backbone
+│   │   │   ├── deberta_v3_classifier
+│   │   │   ├── deberta_v3_masked_lm
+│   │   │   ├── deberta_v3_masked_lm_preprocessor
+│   │   │   ├── deberta_v3_preprocessor
+│   │   │   └── deberta_v3_tokenizer
+│   │   ├── distil_bert
+│   │   │   ├── distil_bert_backbone
+│   │   │   ├── distil_bert_classifier
+│   │   │   ├── distil_bert_masked_lm
+│   │   │   ├── distil_bert_masked_lm_preprocessor
+│   │   │   ├── distil_bert_preprocessor
+│   │   │   └── distil_bert_tokenizer
+│   │   ├── f_net
+│   │   │   ├── f_net3_backbone
+│   │   │   ├── f_net_classifier
+│   │   │   ├── f_net_masked_lm
+│   │   │   ├── f_net_masked_lm_preprocessor
+│   │   │   ├── f_net_preprocessor
+│   │   │   └── f_net_tokenizer
+│   │   ├── gpt2
+│   │   │   ├── gpt2_backbone
+│   │   │   ├── gpt2_causal_lm
+│   │   │   ├── gpt2_causal_lm_preprocessor
+│   │   │   ├── gpt2_preprocessor
+│   │   │   └── gpt2_tokenizer
+│   │   ├── opt
+│   │   │   ├── opt_backbone
+│   │   │   ├── opt_causal_lm
+│   │   │   ├── opt_causal_lm_preprocessor
+│   │   │   ├── opt_preprocessor
+│   │   │   └── opt_tokenizer
+│   │   ├── roberta
+│   │   │   ├── roberta_backbone
+│   │   │   ├── roberta_classifier
+│   │   │   ├── roberta_masked_lm
+│   │   │   ├── roberta_masked_lm_preprocessor
+│   │   │   ├── roberta_preprocessor
+│   │   │   └── roberta_tokenizer
+│   │   └── xlm_roberta
+│   │       ├── xlm_roberta_backbone
+│   │       ├── xlm_roberta_classifier
+│   │       ├── xlm_roberta_masked_lm
+│   │       ├── xlm_roberta_masked_lm_preprocessor
+│   │       ├── xlm_roberta_preprocessor
+│   │       └── xlm_roberta_tokenizer
+│   ├── preprocessing_layers
+│   │   ├── masked_lm_mask_generator
+│   │   ├── multi_segment_packer
+│   │   ├── random_deletion
+│   │   ├── random_swap
+│   │   └── start_end_packer
+│   ├── samplers
+│   │   ├── beam_sampler
+│   │   ├── contrastive_sampler
+│   │   ├── greedy_sampler
+│   │   ├── random_sampler
+│   │   ├── samplers
+│   │   ├── top_k_sampler
+│   │   └── top_p_sampler
+│   └── tokenizers
+│       ├── byte_pair_tokenizer
+│       ├── byte_tokenizer
+│       ├── compute_sentence_piece_proto
+│       ├── compute_word_piece_vocabulary
+│       ├── sentence_piece_tokenizer
+│       ├── tokenizer
+│       ├── unicode_codepoint_tokenizer
+│       └── word_piece_tokenizer
+├── keras_tuner
+│   ├── errors
+│   ├── hypermodels
+│   │   ├── base_hypermodel
+│   │   ├── hyper_efficientnet
+│   │   ├── hyper_image_augment
+│   │   ├── hyper_resnet
+│   │   └── hyper_xception
+│   ├── hyperparameters
+│   ├── oracles
+│   │   ├── base_oracle
+│   │   ├── bayesian
+│   │   ├── grid
+│   │   ├── hyperband
+│   │   ├── random
+│   │   └── synchronized
+│   └── tuners
+│       ├── base_tuner
+│       ├── bayesian
+│       ├── grid
+│       ├── hyperband
+│       ├── objective
+│       ├── random
+│       └── sklearn
+├── layers
+│   ├── activation_layers
+│   │   ├── elu
+│   │   ├── leaky_relu
+│   │   ├── prelu
+│   │   ├── relu
+│   │   ├── softmax
+│   │   └── threshold_relu
+│   ├── activations
+│   ├── attention_layers
+│   │   ├── additive_attention
+│   │   ├── attention
+│   │   └── multi_head_attention
+│   ├── base_layer
+│   ├── constraints
+│   ├── convolution_layers
+│   │   ├── convolution1d
+│   │   ├── convolution1d_transpose
+│   │   ├── convolution2d
+│   │   ├── convolution2d_transpose
+│   │   ├── convolution3d
+│   │   ├── convolution3d_transpose
+│   │   ├── depthwise_convolution2d
+│   │   ├── separable_convolution1d
+│   │   └── separable_convolution2d
+│   ├── core_layers
+│   │   ├── activation
+│   │   ├── dense
+│   │   ├── embedding
+│   │   ├── input
+│   │   ├── lambda
+│   │   └── masking
+│   ├── initializers
+│   ├── merging_layers
+│   │   ├── add
+│   │   ├── average
+│   │   ├── concatenate
+│   │   ├── dot
+│   │   ├── maximum
+│   │   ├── minimum
+│   │   ├── multiply
+│   │   └── subtract
+│   ├── normalization_layers
+│   │   ├── batch_normalization
+│   │   ├── group_normalization
+│   │   ├── layer_normalization
+│   │   └── unit_normalization
+│   ├── pooling_layers
+│   │   ├── average_pooling1d
+│   │   ├── average_pooling2d
+│   │   ├── average_pooling3d
+│   │   ├── global_average_pooling1d
+│   │   ├── global_average_pooling2d
+│   │   ├── global_average_pooling3d
+│   │   ├── global_max_pooling1d
+│   │   ├── global_max_pooling2d
+│   │   ├── global_max_pooling3d
+│   │   ├── max_pooling1d
+│   │   ├── max_pooling2d
+│   │   └── max_pooling3d
+│   ├── preprocessing_layers
+│   │   ├── categorical
+│   │   │   ├── category_encoding
+│   │   │   ├── hashed_crossing
+│   │   │   ├── hashing
+│   │   │   ├── integer_lookup
+│   │   │   └── string_lookup
+│   │   ├── image_augmentation
+│   │   │   ├── random_brightness
+│   │   │   ├── random_contrast
+│   │   │   ├── random_crop
+│   │   │   ├── random_flip
+│   │   │   ├── random_rotation
+│   │   │   ├── random_translation
+│   │   │   └── random_zoom
+│   │   ├── image_preprocessing
+│   │   │   ├── center_crop
+│   │   │   ├── rescaling
+│   │   │   └── resizing
+│   │   ├── numerical
+│   │   │   ├── discretization
+│   │   │   └── normalization
+│   │   └── text
+│   │       └── text_vectorization
+│   ├── recurrent_layers
+│   │   ├── bidirectional
+│   │   ├── conv_lstm1d
+│   │   ├── conv_lstm2d
+│   │   ├── conv_lstm3d
+│   │   ├── gru
+│   │   ├── lstm
+│   │   ├── rnn
+│   │   ├── simple_rnn
+│   │   └── time_distributed
+│   ├── regularization_layers
+│   │   ├── activity_regularization
+│   │   ├── dropout
+│   │   ├── gaussian_dropout
+│   │   ├── gaussian_noise
+│   │   ├── spatial_dropout1d
+│   │   ├── spatial_dropout2d
+│   │   └── spatial_dropout3d
+│   ├── regularizers
+│   └── reshaping_layers
+│       ├── cropping1d
+│       ├── cropping2d
+│       ├── cropping3d
+│       ├── flatten
+│       ├── permute
+│       ├── repeat_vector
+│       ├── reshape
+│       ├── up_sampling1d
+│       ├── up_sampling2d
+│       ├── up_sampling3d
+│       ├── zero_padding1d
+│       ├── zero_padding2d
+│       └── zero_padding3d
+├── losses
+│   ├── hinge_losses
+│   ├── probabilistic_losses
+│   └── regression_losses
+├── metrics
+│   ├── accuracy_metrics
+│   ├── classification_metrics
+│   ├── hinge_metrics
+│   ├── probabilistic_metrics
+│   ├── regression_metrics
+│   └── segmentation_metrics
+├── mixed_precision
+│   ├── loss_scale_optimizer
+│   └── policy
+├── models
+│   ├── model
+│   ├── model_saving_apis
+│   ├── model_training_apis
+│   └── sequential
+├── optimizers
+│   ├── adadelta
+│   ├── adafactor
+│   ├── adagrad
+│   ├── adam
+│   ├── adamax
+│   ├── adamw
+│   ├── ftrl
+│   ├── learning_rate_schedules
+│   │   ├── cosine_decay
+│   │   ├── cosine_decay_restarts
+│   │   ├── exponential_decay
+│   │   ├── inverse_time_decay
+│   │   ├── piecewise_constant_decay
+│   │   └── polynomial_decay
+│   ├── Nadam
+│   ├── rmsprop
+│   └── sgd
+└── utils
+    ├── backend_utils
+    ├── feature_space
+    ├── model_plotting_utils
+    └── python_utils
